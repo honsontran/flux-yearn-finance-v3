@@ -2,6 +2,21 @@
 
 <img src="https://img.shields.io/badge/dynamic/json.svg?style=plastic&color=2096F3&label=locize&query=%24.translatedPercentage&url=https://api.locize.app/badgedata/1c6d6900-5989-49fe-b221-0001423041d2&suffix=%+translated&link=https://www.locize.com" />
 
+# Description
+Forked from [yearn/yearn-finance-v3](https://github.com/yearn/yearn-finance-v3). This fork is identical to Yearn's `develop` branch, barring the updated README to provide context for Flux deployment.
+
+# Flux Deployment Instructions
+To build from source, the instructions are listed below. Feel free to use [this video](https://youtu.be/tuk_0COWRDA) as reference.
+
+1. Create a `.env` file like the `.env.example` file shown. Using the same `.env.example` and renaming the file to `.env` is valid.
+2. Build the image:
+    ```
+    docker build -t ${YourDockerHubUsername}/yearn-finance-v3:latest .
+    ```
+2. Push the image to your Docker Hub account.
+3. If the image is not whitelisted, please reach out to the Flux team to have the image whitelisted.
+4. Register the Flux app.
+
 ## Contributing
 
 Code style follows prettier conventions (`yarn prettier`). Commit messages follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) spec.
